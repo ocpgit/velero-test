@@ -4,7 +4,7 @@ kind: Namespace
 metadata:
   name: bk1
   labels:
-    app: nginx
+    app: debug-pod
 ---    
 apiVersion: v1
 kind: Pod
@@ -13,7 +13,7 @@ metadata:
   name: pv-debug-pod
 spec:
   containers:
-  - image: borland6/ub1804-tools
+  - image: quay.io/borland6/ub1804-tools
     imagePullPolicy: Always
     name: debug-pod
     volumeMounts:
