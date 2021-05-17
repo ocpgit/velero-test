@@ -44,7 +44,7 @@ spec:
         emptyDir: {}
       containers:
       - name: minio
-        image: minio/minio:latest
+        image: quay.io/borland6/minio:latest
         imagePullPolicy: IfNotPresent
         args:
         - server
