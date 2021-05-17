@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pv-debug-pod
+spec:
+  containers:
+  - image: borland6/ub1804-tools
+    imagePullPolicy: Always
+    name: debug-pod
+    volumeMounts:
+      - mountPath: /test
+        name: data-pvc
+  volumes:
+  - name: data-pvc
+    persistentVolumeClaim:
+      claimName: pvc-nfs
